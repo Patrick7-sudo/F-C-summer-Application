@@ -1,0 +1,694 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+    /* colors in there you might wanted 
+  --ff-primary: "Lato", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ */
+ --background-green:rgb(119,221,119,0.2);
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+/* img and link e.t.c */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    font:"Lato";
+}
+ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+
+/*
+=============== 
+global classes 
+===============
+*/
+/* button e.t.c */
+button{
+    background-color: transparent;
+}
+.btn{
+    background-color: transparent;
+    border-radius: 12px;
+    border:2px solid black;
+    width:150px;
+    height: 35px;
+    font-size: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin:3px;
+    outline:none;
+}
+.btn:hover{
+    background-color: green;
+    opacity:0.8;
+    transition:.5s ease;
+    
+}
+
+.title{
+    /* background-color: #6DCE80; */
+    border-bottom: 3px solid #6DCE80;
+    border-top: 3px solid transparent;
+    font-size:60px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 20px;
+    width:50%;
+    transition:0.5s ease-in-out;  
+}
+.title:hover{
+    /* background-image: url(./backgroundFnC.jpg); */
+    border-bottom:3px solid green;
+    border-top:3px solid green;
+    transition:0.5s ease-in-out;
+}
+.night-mode{
+    position: sticky;
+}
+
+
+ .hidden{
+    visibility: hidden;   
+}
+.wrongAns{
+    z-index:-1;
+    width: 100vw;
+    height:344px;
+    padding-bottom: 15px;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap; 
+    background-color: #FFB2B2;
+}
+
+/*
+=============== 
+NavBar 
+===============
+*/
+.main-navbar{
+    height: 15vh;
+    width:100%;
+   /* background-color:red;  */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center{
+    /* background-color:orange; */
+    width:95%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.navbar-section-logo{
+    height: auto;
+    width:auto;
+    /* background-color:purple; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+}
+
+#logo-a{
+    /* background-color: white; */
+    text-align: left;
+    word-spacing: 5px;
+    line-height: 20px;
+    letter-spacing:2px;
+    font-weight: bold;
+    font-size:18px;
+    font-family:'Open Sans';   
+}
+
+.navbar-options{
+    width:auto;
+    /* background-color:yellowgreen; */
+    display:flex;
+    align-items: center;
+}
+
+.navbar-options li{
+    float:left; 
+    margin: 30px;
+    border-top: 3px solid black;    
+}
+
+.navbar-options a{  
+    padding:10px;
+    float:left;
+}
+
+.navbar-options li:hover{
+    border-top:3px solid green; 
+    transition-timing-function: ease;
+    transition-duration:1s;
+}
+
+.light-mode{
+    position: relative;
+    opacity: 0;
+}
+
+.mode-options{
+    /* border: 2px solid black; */
+    background-color:cadetblue;
+    border-radius: 25px;
+    width:10vw;
+    height:3vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;   
+}
+
+.mode-option{
+  margin:20px;
+}
+
+.round{
+    position: absolute;
+    width:5vw;
+    height: 2.8vh;
+    background-color: green;
+    border-radius: 25px;
+    transition: transform 0.5s linear;
+}
+
+.light-mode:checked + .mode-options .round{
+    transform: translateX(5vw);
+    
+}
+.light-mode:checked + .mode-options{
+    background-color: var(--background-green);
+}
+
+
+#hei{
+    border-top: 3px solid green;
+}
+
+.night{
+    background-color: turquoise;
+}
+
+
+
+/*
+=============== 
+End of Navbar
+===============
+*/
+
+
+/*
+=============== 
+welcome segment
+===============
+*/
+
+.welcome-segment{
+    width:100vw;
+    height:50vh;
+    /* margin-top:15vh; */
+    background-image: url(./try\ another\ background.jpg);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+
+.welcome-center{
+    /* background-color:#FFB2B2; */
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items:baseline;  */
+    flex-wrap:wrap;
+    width:50%;
+    height: 80%; 
+
+}
+
+#greetings{
+    color: black;
+    background-color:#6DCE80;
+;
+    font-size:60px;
+    letter-spacing: 1.4px;
+    font-weight: bolder;
+    margin:10px 10px 20px 10px;
+    overflow: hidden;
+    width:50%;
+    height:80px;   
+}
+
+#welcm-stat{
+    margin:20px 10px 20px 10px;
+    overflow:hidden;
+    height:50%;
+
+ 
+}
+#welcm-stat span{
+    background-color: white;
+    font-size:26px;
+    font-weight:bold;
+}
+/*
+=============== 
+End of welcome segment 
+===============
+*/
+
+/*
+=============== 
+Riddle segment 
+===============
+*/
+.riddle{
+    width:100vw;
+    height:auto;
+    /* background-color: indigo; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.clouds{
+    z-index:-1;
+    width: 100vw;
+    height:40vh;
+    padding-bottom: 15px;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;   
+}
+
+.cloud{
+    padding-bottom:0; 
+    position: relative; 
+    height: 40vh;
+    transform: translateX(-200%);
+    /* background-color: yellow; */
+    
+} 
+#cloud1{
+   animation: clouding 15s infinite linear;
+}
+#cloud2{
+   animation: clouding 15s infinite linear;
+   animation-delay: 2s;
+}
+
+@keyframes clouding{
+  from {left: 0%;}
+  to {left: 200%;}
+}
+
+.center-riddle{
+    /* background-color: white; */
+    height:auto; 
+    width:50vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#riddle-question{
+    margin:20px;
+    padding:20px;
+    /* background-color: purple; */
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#riddle-question span{
+    z-index:2;
+    font-size: 30px;
+    color:black;
+    font-weight: 700;
+}
+
+.form-riddle{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    width:auto;
+    
+}
+
+#riddle-answer{
+    /* background-color: blueviolet; */
+    width:15rem;
+    height: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right:20px;
+    margin-bottom:5px;
+    outline: none;
+}
+
+/*
+=============== 
+end of Riddle segment 
+===============
+*/
+
+/*
+=============== 
+get to know me segment 
+===============
+*/
+.know-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height:100vh;
+    background-color: var(--background-green);
+    /* margin-top: 3rem; */
+}
+
+#know-me-center{
+    /* background-color: violet; */
+    display: flex;
+    align-items: center;
+    justify-content: center,space-around;
+    width:90%;
+    margin-top:25px;
+    
+
+}
+
+.know-me-text-holder{
+    background-color: #a2dbaa;
+    margin:20px;
+    width:50%;
+    height:60vh;
+    display: flex;
+    justify-content: center;
+    border:3px solid green;
+    border-radius:25px;
+    transition:1s ease-in-out;
+    overflow: scroll;
+}
+
+.know-me-text-holder:hover{
+    transform: translate(15px,15px);
+    height: 80vh;
+    /* background-color: #054a0e; */
+    background-color: transparent;
+    border:3px solid yellowgreen;
+    transition:1s ease-in-out;  
+}
+
+.know-me-text{
+    background-color: rgb(255,255,255,0.5);
+    margin:10px;
+    padding:10px;
+    height: 80%;
+    border:3px solid green;
+    border-radius: 28px;
+    text-align: center;
+    font-size:18px;
+    transition:1s ease-in-out;  
+    overflow: hidden;
+}
+
+.know-me-text:hover{
+    background-color: rgb(255,255,255,0.98);;
+    border:3px solid yellowgreen;
+    height:90%;
+    transition:1s ease-in-out;  
+}
+#photo-holder-id{
+    border-radius:50%;
+    border:3px solid green;
+    overflow: hidden;
+    height: auto;
+    width:25%;
+    margin-left:10%;
+}
+#photo-holder-id img{
+    width:100%;
+    height:100%;  
+}
+/*
+=============== 
+end of get to know me segment 
+===============
+*/
+
+/*
+=============== 
+why F&C segment 
+===============
+*/
+.why-fnc{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+
+
+#why-center{
+     width:90vw;
+    height:70vh;
+    max-width:80rem;
+    border:3px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:0.6s ease-in-out;
+     margin-top:10px;
+}
+
+#why-center:hover{
+    background-color: rgb(119,221,119,0.05);
+    border-radius: 50px;
+    transition:0.6s ease-in-out;
+    border:3px solid black;
+}
+
+#slider-holder{
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border: 3px solid green;
+   
+}
+
+.slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all 0.25s ease-in-out;
+}
+
+
+#why-buttons{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   width: 15%;
+   cursor: pointer;
+   margin:4px;
+}
+
+.btns{
+    height: auto;
+    width:auto;
+    font-size:100px;
+    border:3px solid transparent;
+    transition:0.3s ease-in-out;
+}
+
+.btns:hover{
+    border:3px solid green;
+    border-radius: 25px;
+    transition:0.3s ease-in-out;
+    background-color: rgb(119,221,119,0.4);
+}
+
+
+/*
+=============== 
+end of F&C segment 
+===============
+*/
+
+
+/*
+=============== 
+contact me segment 
+===============
+*/
+.contact-info{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--background-green);
+
+}
+
+#link-info{
+    width:45%;
+    height:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 4px solid green;
+    border-left:4px solid transparent;
+    border-top:4px solid transparent;
+    border-bottom:4px solid transparent;
+    transition:0.3s ease-in-out;
+}
+
+#link-info:hover{
+    border:4px solid green;
+    border-radius: 45px;
+    transition:0.5s ease-in-out;
+    background-color: white;
+}
+#links{
+    width:30%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#links img{
+    border-radius:50%;
+    padding:20px;    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#links img:hover{
+    border:3px solid green;
+    transition:0.3s ease-in-out;
+}
+#links a{
+    transition:0.3s ease-in-out;
+    margin:20px;
+}
+#links a:hover{
+    transform: translate(10px,10px);
+    transition:0.3s ease-in-out;
+    transform: scale(1.3);
+    border-radius: 50%;   
+}
+
+#quotes-info{
+    width:45%;
+    height:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left:4px solid green;
+    border-right: 4px solid transparent;
+    border-top:4px solid transparent;
+    border-bottom:4px solid transparent;
+    transition:0.3s ease-in-out;
+    overflow: hidden;
+}
+#quotes-info:hover{
+    border:4px solid green;
+    border-radius: 45px;
+    transition:0.5s ease-in-out;
+    background-color: white;
+}
+
+#quote{
+    font-family: 'Rock Salt', cursive;
+    font-size: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#quote span{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin-left:100px;
+}
+/*
+=============== 
+end of contact me segment 
+===============
+*/
+/* body{
+    background-color: turquoise;
+} */
+.hello{
+    grid-template-areas: "header header photos"
+                          "rainbow rainbow photos" ;
+}
+
+
+
+
