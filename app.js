@@ -1,3 +1,31 @@
+//welcome box segment
+const inputWelcome = document.querySelector('#input');
+const btnWelcome = document.getElementById('submitBtnWelcome');
+const welcomeInputSection =document.querySelector('.input-section');
+
+function welcomeBox(){
+    const nameGiven =inputWelcome.value;
+
+    if(nameGiven !== null){
+      return  document.getElementById("welcomeName").innerHTML = nameGiven;
+    };
+
+    return nameGiven;
+}
+
+
+btnWelcome.addEventListener("click",welcomeBox);
+btnWelcome.addEventListener("click",function(e){
+    e.preventDefault();
+});
+
+btnWelcome.addEventListener('click',function(){
+    return welcomeInputSection.classList.add('hiddenWelcomeBox')
+});
+
+
+
+//end of welcome box segment
 
 // light-mode segment
 
