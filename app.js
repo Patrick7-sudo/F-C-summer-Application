@@ -5,7 +5,6 @@ const welcomeInputSection =document.querySelector('.input-section');
 
 function welcomeBox(){
     const nameGiven =inputWelcome.value;
-
     if(nameGiven !== null){
       return  document.getElementById("welcomeName").innerHTML = nameGiven;
     };
@@ -22,7 +21,6 @@ btnWelcome.addEventListener("click",function(e){
 btnWelcome.addEventListener('click',function(){
     return welcomeInputSection.classList.add('hiddenWelcomeBox')
 });
-
 
 
 //end of welcome box segment

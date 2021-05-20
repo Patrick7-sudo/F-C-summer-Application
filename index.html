@@ -36,11 +36,11 @@
             <!-- navigation options on Navbar -->
             <div class="navbar-options">
                 <ul>
-                    <li><a href="#">Get To Know Me</a></li>
+                    <li><a href="#aboutMe">Get To Know Me</a></li>
 
-                    <li><a href="#">Why Founders & Coders</a></li>
+                    <li><a href="#Reasons">Why Founders & Coders</a></li>
 
-                    <li><a href="#">Contact Me</a></li>
+                    <li><a href="#links">Links</a></li>
                 </ul>
 
                 <input type="checkbox" class="light-mode" id="checkbox">
@@ -56,9 +56,12 @@
     <!-- End of navigation bar -->
 
     <!-- welcome segment -->
+    
     <section class="welcome-segment">
         <div class="welcome-center">
-            <p id="greetings">Hello <span id="welcomeName"></span> </p>
+            <div id="greetings">
+                <p class="autoWidth">Hi, <span id="welcomeName"></span> </p>
+            </div>
 
             <p id="welcm-stat"><span>This is an application for Founders and Coders summer 2021 programme. My name is
                     Tasniim Bari and I hope this website will give you an overview of what I have learn in order to
@@ -67,6 +70,7 @@
         </div>
 
     </section>
+   
     <!-- End of welcome segment -->
 
     <!-- riddle segment -->
@@ -105,10 +109,11 @@
 
         </div>
     </section>
+    
     <!-- end of riddle segment -->
 
     <!-- get to know me segment -->
-    <section class="know-me">
+    <section class="know-me" id="aboutMe">
 
         <div class="title">Get To Know Me</div>
 
@@ -136,10 +141,12 @@
 
         </div>
     </section>
+
     <!-- End of get to know me segment -->
 
     <!-- Why F&C segment -->
-    <section class="why-fnc">
+    
+    <section class="why-fnc" id="Reasons">
 
         <div class="title">Why F&C programme</div>
 
@@ -175,7 +182,7 @@
     <!-- End of F&C segment -->
 
     <!-- contact me segment -->
-    <section class="contact-info">
+    <section class="contact-info" id="links-navbar">
         <div id="link-info">
             <div id="links">
                 <a href="https://www.codewars.com/users/tasniimbari" target="_blank"><img src="./codewars-icon.png" alt="round-logo-of-codeWar-website"></a>
@@ -185,14 +192,11 @@
         </div>
         <div id="quotes-info">
             <div id="quote">
-                <p>"It always seems impossible until it's done"<span>- Nelson Mandela</span> </p>
+                <h5>"It always seems impossible until it's done"<br> <span>- Nelson Mandela</span> </h5>
             </div>
         </div>
     </section>
     <!-- End of contact me segment -->
-    <section class="hello">
-
-    </section>
 
     <script src="./app.js"></script>
 

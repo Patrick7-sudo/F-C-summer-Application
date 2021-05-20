@@ -85,7 +85,7 @@ button{
     letter-spacing: 3px;
     text-align: center;
     margin-top: 20px;
-    width:50%;
+    width:auto;
     transition:0.5s ease-in-out;  
 }
 .title:hover{
@@ -105,7 +105,7 @@ button{
 .wrongAns{
     z-index:-1;
     width: 100vw;
-    height:344px;
+    min-height:80vh;
     padding-bottom: 15px;
     position: absolute;
     overflow: hidden;
@@ -122,7 +122,7 @@ welcome box
 */
 
 .input-section{
-    height:100vh;
+    min-height:100vh;
     width:100vw;
     background-color:rgb(255,182,193,0.5);
     display: flex;
@@ -134,7 +134,7 @@ welcome box
 }
 
 #input-center{
-    height:80%;
+    height:600px;
     width:90%;
     background-color: rgb(125, 222, 228,0.8);
     border-radius: 25px;
@@ -146,23 +146,25 @@ welcome box
 }
 
 #input-message{
-    height:50%;
-    width:50%;
+    height:250px;
+    width:auto;
     background-color: rgb(13, 105, 111);
     display: flex;
     justify-content: center;
     justify-content: space-around;
     align-items: center;
+    padding:30px;
 }
 
 #input-holder{
     height:30%;
-    width: 50%;
+    width: auto;
     background-color:rgb(157, 164, 165,0.3);
     border:3px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding:20px;
 
 }
 #input{
@@ -181,6 +183,24 @@ welcome box
     display: none;
 }
 
+
+@media screen and (max-width:996px){
+
+    .input-section{
+        flex-direction: row;
+    }
+
+    #input-holder{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #input{
+        margin:0;
+    }
+}
+
 /*
 =============== 
 end of welcome box
@@ -193,8 +213,8 @@ NavBar
 ===============
 */
 .main-navbar{
-    height: 15vh;
-    width:100%;
+    min-height: 15vh;
+    width:100vw;
    /* background-color:red;  */
     display:flex;
     align-items: center;
@@ -263,8 +283,8 @@ NavBar
     /* border: 2px solid black; */
     background-color:cadetblue;
     border-radius: 25px;
-    width:10vw;
-    height:3vh;
+    width:192px;
+    height:23.78px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -279,15 +299,15 @@ NavBar
 
 .round{
     position: absolute;
-    width:5vw;
-    height: 2.8vh;
+    width:50%;
+    height: 100%;
     background-color: green;
     border-radius: 25px;
     transition: transform 0.5s linear;
 }
 
 .light-mode:checked + .mode-options .round{
-    transform: translateX(5vw);
+    transform: translateX(100%);
     
 }
 .light-mode:checked + .mode-options{
@@ -303,7 +323,26 @@ NavBar
     background-color: turquoise;
 }
 
+@media screen and (max-width:1296px){
 
+    .center{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:826px){
+
+    .navbar-options{
+        margin: 10px;
+    }
+
+    .navbar-options ul{
+        display: none;
+    }
+}
 
 /*
 =============== 
@@ -320,8 +359,7 @@ welcome segment
 
 .welcome-segment{
     width:100vw;
-    height:50vh;
-    /* margin-top:15vh; */
+    height:450px;
     background-image: url(./try\ another\ background.jpg);
     display: flex;
     justify-content: center;
@@ -343,16 +381,21 @@ welcome segment
 
 #greetings{
     color: black;
-    background-color:#6DCE80;
     font-size:60px;
     letter-spacing: 1.4px;
     font-weight: bolder;
     margin:10px 10px 20px 10px;
-    padding-left:20px;
+    padding-left:10px;
+    padding-right:10px;
     overflow: scroll;
-    width:30vw;
-    height:80px;
+    /* width:auto; */
+     height:80px; 
     
+}
+
+.autoWidth{
+    background-color: #6DCE80;
+    display:inline-block;
 }
 
 #welcm-stat{
@@ -367,6 +410,21 @@ welcome segment
     font-size:26px;
     font-weight:bold;
 }
+
+@media screen and (max-width:826px){
+    .welcome-center{
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+        height: auto;
+    }
+    #welcm-stat{
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+    
+}
 /*
 =============== 
 End of welcome segment 
@@ -380,7 +438,7 @@ Riddle segment
 */
 .riddle{
     width:100vw;
-    height:auto;
+    min-height:30vh;
     /* background-color: indigo; */
     display: flex;
     flex-direction: column;
@@ -395,18 +453,20 @@ Riddle segment
 .clouds{
     z-index:-1;
     width: 100vw;
-    height:40vh;
+    height:100%;
     padding-bottom: 15px;
     position: absolute;
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;   
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* background-color: bisque;    */
 }
 
 .cloud{
     padding-bottom:0; 
     position: relative; 
-    height: 40vh;
+    height: auto;
     transform: translateX(-200%);
     /* background-color: yellow; */
     
@@ -427,7 +487,7 @@ Riddle segment
 .center-riddle{
     /* background-color: white; */
     height:auto; 
-    width:50vw;
+    width:657px;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -471,6 +531,27 @@ Riddle segment
     outline: none;
 }
 
+@media screen and (max-width:826px){
+   .form-riddle{
+       /* background-color: palegreen; */
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width:100%;   
+   }
+   
+   .cloud{
+       transform: translateX(-100%);
+   }
+
+    @keyframes clouding{
+    from {left: 0%;}
+    to {left: 300%;}
+    }
+
+    
+}
+
 /*
 =============== 
 end of Riddle segment 
@@ -487,7 +568,7 @@ get to know me segment
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    height:100vh;
+    min-height:100vh;
     background-color: var(--background-green);
     /* margin-top: 3rem; */
 }
@@ -496,9 +577,10 @@ get to know me segment
     /* background-color: violet; */
     display: flex;
     align-items: center;
-    justify-content: center,space-around;
     width:90%;
     margin-top:25px;
+    min-height: 80vh;
+    padding: 10px;
     
 
 }
@@ -507,7 +589,7 @@ get to know me segment
     background-color: #a2dbaa;
     margin:20px;
     width:50%;
-    height:60vh;
+    min-height:30vh;
     display: flex;
     justify-content: center;
     border:3px solid green;
@@ -518,7 +600,7 @@ get to know me segment
 
 .know-me-text-holder:hover{
     transform: translate(15px,15px);
-    height: 80vh;
+    min-height: 55vh;
     /* background-color: #054a0e; */
     background-color: transparent;
     border:3px solid yellowgreen;
@@ -529,7 +611,7 @@ get to know me segment
     background-color: rgb(255,255,255,0.5);
     margin:10px;
     padding:10px;
-    height: 80%;
+    min-height: 30vh;
     border:3px solid green;
     border-radius: 28px;
     text-align: center;
@@ -541,20 +623,39 @@ get to know me segment
 .know-me-text:hover{
     background-color: rgb(255,255,255,0.98);;
     border:3px solid yellowgreen;
-    height:90%;
+    min-height:70vh;
     transition:1s ease-in-out;  
 }
 #photo-holder-id{
     border-radius:50%;
     border:3px solid green;
     overflow: hidden;
-    height: auto;
+    min-height: 100%;
     width:25%;
     margin-left:10%;
 }
 #photo-holder-id img{
     width:100%;
     height:100%;  
+}
+
+@media screen and (max-width:826px){
+   #know-me-center{
+       /* display: flex; */
+       flex-direction:column-reverse;
+       align-items: center;
+   }
+   
+   .know-me-text-holder{
+       width:auto;
+   }
+
+   .know-me-text:hover{
+    min-height: auto; 
+    }
+    .know-me-text-holder:hover{
+        transform: none; 
+    }  
 }
 /*
 =============== 
@@ -569,7 +670,7 @@ why F&C segment
 */
 .why-fnc{
     width:100vw;
-    height: 100vh;
+    min-height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -578,15 +679,15 @@ why F&C segment
 
 
 #why-center{
-     width:90vw;
-    height:70vh;
-    max-width:80rem;
+    width:90%;
+    height:500px;
     border:3px solid transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     transition:0.6s ease-in-out;
-     margin-top:10px;
+    margin-top:10px;
+    
 }
 
 #why-center:hover{
@@ -597,8 +698,8 @@ why F&C segment
 }
 
 #slider-holder{
-    width: 50vw;
-    height: 50vh;
+    width: 590px;
+    height: 338px;
     position: relative;
     display: flex;
     align-items: center;
@@ -614,6 +715,7 @@ why F&C segment
     display: flex;
     transition: all 0.25s ease-in-out;
 }
+
 
 
 #why-buttons{
@@ -640,6 +742,12 @@ why F&C segment
     background-color: rgb(119,221,119,0.4);
 }
 
+@media screen and (max-width:826px){
+   .slide img{
+       width:100%;
+   }
+}
+
 
 /*
 =============== 
@@ -655,17 +763,16 @@ contact me segment
 */
 .contact-info{
     width:100vw;
-    height:100vh;
+    min-height:100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: var(--background-green);
-
 }
 
 #link-info{
     width:45%;
-    height:80%;
+    min-height:80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -674,6 +781,7 @@ contact me segment
     border-top:4px solid transparent;
     border-bottom:4px solid transparent;
     transition:0.3s ease-in-out;
+    
 }
 
 #link-info:hover{
@@ -688,6 +796,8 @@ contact me segment
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #links img{
@@ -697,7 +807,7 @@ contact me segment
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 }
 
 #links img:hover{
@@ -717,7 +827,7 @@ contact me segment
 
 #quotes-info{
     width:45%;
-    height:80%;
+    height:auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -742,12 +852,34 @@ contact me segment
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 40px;
 }
 
-#quote span{
+#quote h5{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    margin-left:100px;
+}
+
+@media screen and (max-width:1126px){
+   .contact-info{
+
+       display: flex;
+       flex-direction: column;
+       min-height: 100vh;
+   }
+
+
+}
+
+@media screen and (max-width:826px){
+   #links{
+       width:auto;
+   }
+
+   #quote{
+       font-size: 20px;
+   }
+
+
 }
 /*
 =============== 
@@ -761,6 +893,13 @@ end of contact me segment
     grid-template-areas: "header header photos"
                           "rainbow rainbow photos" ;
 }
+
+/* .block{  
+    position: block;
+    
+} */
+
+
 
 
 
