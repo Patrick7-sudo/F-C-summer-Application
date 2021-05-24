@@ -13,14 +13,6 @@ Variables
 ===============
 */
 :root {
-    /* colors in there you might wanted 
-  --ff-primary: "Lato", sans-serif;
-  --transition: all 0.3s linear;
-  --spacing: 0.25rem;
-  --radius: 0.5rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
- */
  --background-green:rgb(119,221,119,0.2);
 }
 
@@ -29,7 +21,6 @@ Variables
 Global Styles
 ===============
 */
-/* img and link e.t.c */
 * {
   margin: 0;
   padding: 0;
@@ -53,7 +44,6 @@ ul{
 global classes 
 ===============
 */
-/* button e.t.c */
 button{
     background-color: transparent;
 }
@@ -77,7 +67,6 @@ button{
 }
 
 .title{
-    /* background-color: #6DCE80; */
     border-bottom: 3px solid #6DCE80;
     border-top: 3px solid transparent;
     font-size:60px;
@@ -89,7 +78,6 @@ button{
     transition:0.5s ease-in-out;  
 }
 .title:hover{
-    /* background-image: url(./backgroundFnC.jpg); */
     border-bottom:3px solid green;
     border-top:3px solid green;
     transition:0.5s ease-in-out;
@@ -215,14 +203,12 @@ NavBar
 .main-navbar{
     min-height: 15vh;
     width:100vw;
-   /* background-color:red;  */
     display:flex;
     align-items: center;
     justify-content: center;
 }
 
 .center{
-    /* background-color:orange; */
     width:95%;
     height: 80%;
     display: flex;
@@ -232,7 +218,6 @@ NavBar
 .navbar-section-logo{
     height: auto;
     width:auto;
-    /* background-color:purple; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,7 +225,6 @@ NavBar
 }
 
 #logo-a{
-    /* background-color: white; */
     text-align: left;
     word-spacing: 5px;
     line-height: 20px;
@@ -252,7 +236,6 @@ NavBar
 
 .navbar-options{
     width:auto;
-    /* background-color:yellowgreen; */
     display:flex;
     align-items: center;
 }
@@ -280,7 +263,6 @@ NavBar
 }
 
 .mode-options{
-    /* border: 2px solid black; */
     background-color:cadetblue;
     border-radius: 25px;
     width:192px;
@@ -368,11 +350,9 @@ welcome segment
 
 
 .welcome-center{
-    /* background-color:#FFB2B2; */
     display: flex; 
     flex-direction: column;
     justify-content: flex-start;
-    /* align-items:baseline;  */
     flex-wrap:wrap;
     width:50%;
     height: 80%; 
@@ -388,7 +368,6 @@ welcome segment
     padding-left:10px;
     padding-right:10px;
     overflow: scroll;
-    /* width:auto; */
      height:80px; 
     
 }
@@ -439,7 +418,6 @@ Riddle segment
 .riddle{
     width:100vw;
     min-height:30vh;
-    /* background-color: indigo; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -460,7 +438,6 @@ Riddle segment
     justify-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-    /* background-color: bisque;    */
 }
 
 .cloud{
@@ -468,12 +445,12 @@ Riddle segment
     position: relative; 
     height: auto;
     transform: translateX(-200%);
-    /* background-color: yellow; */
-    
 } 
+
 #cloud1{
    animation: clouding 15s infinite linear;
 }
+
 #cloud2{
    animation: clouding 15s infinite linear;
    animation-delay: 2s;
@@ -485,24 +462,23 @@ Riddle segment
 }
 
 .center-riddle{
-    /* background-color: white; */
     height:auto; 
     width:657px;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
+
 #riddle-question{
     margin:20px;
     padding:20px;
-    /* background-color: purple; */
     line-height: 20px;
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
 }
+
 #riddle-question span{
     z-index:2;
     font-size: 30px;
@@ -511,7 +487,6 @@ Riddle segment
 }
 
 .form-riddle{
-    /* background-color: blue; */
     display: flex;
     justify-content: center;
     width:auto;
@@ -519,7 +494,6 @@ Riddle segment
 }
 
 #riddle-answer{
-    /* background-color: blueviolet; */
     width:15rem;
     height: 2.5rem;
     border-radius: 12px;
@@ -533,7 +507,6 @@ Riddle segment
 
 @media screen and (max-width:826px){
    .form-riddle{
-       /* background-color: palegreen; */
        display: flex;
        flex-direction: column;
        align-items: center;
@@ -551,9 +524,7 @@ Riddle segment
     @keyframes clouding{
     from {left: 0%;}
     to {left: 300%;}
-    }
-
-    
+    }   
 }
 
 /*
@@ -574,11 +545,9 @@ get to know me segment
     width: 100vw;
     min-height:100vh;
     background-color: var(--background-green);
-    /* margin-top: 3rem; */
 }
 
 #know-me-center{
-    /* background-color: violet; */
     display: flex;
     align-items: center;
     width:90%;
@@ -606,7 +575,6 @@ get to know me segment
 .know-me-text-holder:hover{
     transform: translate(15px,15px);
     max-height: 55vh;
-    /* background-color: #054a0e; */
     background-color: transparent;
     border:3px solid yellowgreen;
     transition:1s ease-in-out;  
@@ -648,7 +616,6 @@ get to know me segment
 
 @media screen and (max-width:826px){
    #know-me-center{
-       /* display: flex; */
        flex-direction:column-reverse;
        align-items: center;
    }
@@ -754,7 +721,6 @@ why F&C segment
        width:100%;
    }
 }
-
 
 /*
 =============== 
@@ -885,26 +851,13 @@ contact me segment
    #quote{
        font-size: 20px;
    }
-
-
 }
 /*
 =============== 
 end of contact me segment 
 ===============
 */
-/* body{
-    background-color: turquoise;
-} */
-.hello{
-    grid-template-areas: "header header photos"
-                          "rainbow rainbow photos" ;
-}
 
-/* .block{  
-    position: block;
-    
-} */
 
 
 
